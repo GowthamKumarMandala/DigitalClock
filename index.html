@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DateAndTime</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .title{
+            font-size: 62px;
+            margin-top: 10px;;
+            margin-left: 300px;
+            font-family: fantasy;
+        }
+        body{
+            background-color: pink;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .page{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top:40px;
+            margin-left: 330px;
+            height:300px;
+            width: 600px;
+            border-radius: 10px;
+            box-shadow: 3px 5px 14px #504f45;
+            background-color: rgb(252, 252, 115);
+        }
+        .datepage{
+            margin-left: 230px;
+            margin-top:40px;
+            font-size: 32px;
+            padding:9px 9px 9px 9px;
+            font-family: fantasy;
+        }
+        #date{
+            background-color:black ;
+            border:3px solid grey;
+            color:white;
+            box-shadow: 0px 0px 11px rgb(255 0 162);
+            margin:8px;
+        }
+        #month{
+            background-color:black ;
+            border:3px solid grey;
+            color:white;
+            box-shadow: 0px 0px 11px rgb(255, 234, 0);
+            margin:8px;
+        }
+        #year{
+            background-color:black ;
+            border:3px solid grey;
+            color:white;
+            box-shadow: 0px 0px 11px rgb(31, 210, 255);
+            margin:8px;
+        }
+        .container {
+            height: 150px;
+            width: 150px;
+            background-color: aqua;
+            padding: 4px 4px 4px 4px;
+            margin: 10px 4px 4px 4px;
+            border-radius: 50%;
+            border: 4px solid #ef97a6;
+            box-shadow: 3px 5px 14px #504f45;
+            font-size: 23px;
+            font-weight: bold;
+            font-family: cursive;
+        }
+        .box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            font-weight: bold;
+            margin-top:20px;
+            font-family: cursive;
+        }
+        .container #t{
+            height: 42px;
+            width: 132px;
+            background-color: black;
+            font-size: 32px;
+            color: white;
+            margin: 48px 1px 2px 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border:3.3px solid white;
+            border-radius: 5px;
+            box-shadow: 3px 2px 6px black;
+        }
+    </style>
+</head>
+<body>
+   <ul class="title">
+    DIGITAL CLOCK
+   </ul>
+    <div class="datepage">
+        <div id="date"></div>
+        <div id="month"></div>
+        <div id="year"></div>
+    </div>
+   <div class="page">
+    <div class="container">
+        <div class="box">
+            <span id="hours"></span>
+        </div>
+        <div id="t">
+            hours
+        </div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <span id="mins"></span>
+        </div>
+        <div id="t">
+            Minutes
+        </div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <span id="seconds"></span>
+        </div>
+        <div id="t">
+            Seconds
+        </div>
+    </div>
+   </div>
+   <script>
+    
+    function displayTime(){
+            time = new Date();
+            let yr = time.getFullYear();
+            let dat = time.getDate();
+            let m = time.getMonth();
+            hr=time.getHours();
+            if(hr>12){
+                hr-=12;
+            }
+            document.getElementById("date").innerHTML = "DATE    :"+dat;
+            document.getElementById("month").innerHTML = "MONTH  :"+m;
+            document.getElementById("year").innerHTML = "YEAR    :"+yr;
+            document.getElementById("hours").innerHTML = hr;
+            document.getElementById("mins").innerHTML = time.getMinutes();
+            document.getElementById("seconds").innerHTML = time.getSeconds();
+    }
+    setInterval(displayTime,1000);
+   </script>
+</body>
+</html>
