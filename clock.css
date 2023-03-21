@@ -6,7 +6,7 @@
 .title{
     font-size: 62px;
     margin-top: 10px;;
-    margin-left: 300px;
+    margin-left: 12px;
     font-family: fantasy;
 }
 body{
@@ -21,7 +21,7 @@ body{
     align-items: center;
     justify-content: center;
     margin-top:40px;
-    margin-left: 330px;
+    margin-left: 44px;
     height:300px;
     width: 600px;
     border-radius: 10px;
@@ -29,7 +29,7 @@ body{
     background-color: rgb(252, 252, 115);
 }
 .datepage{
-    margin-left: 230px;
+    margin-left: 0px;
     margin-top:40px;
     font-size: 32px;
     padding:9px 9px 9px 9px;
